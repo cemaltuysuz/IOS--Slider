@@ -20,10 +20,13 @@ protocol PresenterToInteracotrMainProtocol {
 
 protocol InteractorToPresenterMainProtocol {
     func featuredNews(articles:[Article])
+    func news(articles:[Article])
 }
 
 protocol PresenterToViewMainProtocol {
     func featuredNews(articles:[Article])
+    func news(articles:[Article])
+    
 }
 
 protocol PresenterToRouterMainProtocol {

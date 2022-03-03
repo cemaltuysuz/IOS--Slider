@@ -17,7 +17,9 @@ class MainInteractor : PresenterToInteracotrMainProtocol {
                     
                     switch result {
                     case .success(let success):
-                        print(success.status)
+                        if let articles = success.articles, articles.count > 0 {
+                            self.presenter?.featuredNews(articles: articles)
+                        }
                     case .failure(let failure):
                         print(failure.localizedDescription)
                     }

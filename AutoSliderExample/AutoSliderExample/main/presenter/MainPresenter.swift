@@ -19,4 +19,8 @@ class MainPresenter : ViewToPresenterMainProtocol, InteractorToPresenterMainProt
     func featuredNews(articles: [Article]) {
         view?.featuredNews(articles: articles)
     }
+    
+    func news(articles: [Article]) {
+        view?.news(articles: articles)
+    }
 }
