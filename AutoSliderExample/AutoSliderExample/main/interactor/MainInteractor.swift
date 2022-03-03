@@ -10,6 +10,8 @@ import Foundation
 class MainInteractor : PresenterToInteracotrMainProtocol {
     var presenter: InteractorToPresenterMainProtocol?
     
+    var specialCount = 5
+    
     func getNews() {
         Resource<NewsResponse>().fetchData(
             urlString: RequestBuilder
@@ -17,8 +19,15 @@ class MainInteractor : PresenterToInteracotrMainProtocol {
                     
                     switch result {
                     case .success(let success):
-                        if let articles = success.articles, articles.count > 0 {
-                            self.presenter?.featuredNews(articles: articles)
+                        if var articles = success.articles, articles.count > 0 {
+                            var featuredNews = [Article]()
+                            
+                            for i in 1...self.specialCount {
+                                featuredNews.append(articles[i])
+                                articles.remove(at: i)
+                            }
+                            self.presenter?.news(articles: articles)
+                            self.presenter?.featuredNews(articles: featuredNews)
                         }
                     case .failure(let failure):
                         print(failure.localizedDescription)

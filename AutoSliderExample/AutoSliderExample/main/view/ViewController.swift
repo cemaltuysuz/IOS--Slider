@@ -30,8 +30,14 @@ class ViewController: UIViewController {
     }
     
     func setupUI(){
+        self.news = [Article]()
+        self.featuredNews = [Article]()
+        
         self.featuredCollectionView.delegate = self
         self.featuredCollectionView.dataSource = self
+        
+        self.newsCollectionView.delegate = self
+        self.newsCollectionView.dataSource = self
     }
 }
 
@@ -46,7 +52,10 @@ extension ViewController : PresenterToViewMainProtocol {
     }
     
     func news(articles: [Article]) {
-        
+        DispatchQueue.main.async {
+            self.news = articles
+            self.newsCollectionView.reloadData()
+        }
     }
 }
 
@@ -61,7 +70,7 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if collectionView == self.newsCollectionView {
+        if collectionView == self.featuredCollectionView {
             let current = featuredNews![indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "featuredCollectionCell", for: indexPath) as! FeaturedCollectionViewCell
             cell.configue(article: current)
