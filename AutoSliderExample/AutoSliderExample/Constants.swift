@@ -9,6 +9,6 @@ import Foundation
 
 class Constants {
     static let BASE_URL = "https://newsapi.org/v2"
-    static let API_KEY = "8197be6c1a234ecdbc03434c0383096d"
+    static let API_KEY = "***** Your API Key **** "
 }
 

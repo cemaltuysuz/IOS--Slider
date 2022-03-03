@@ -47,39 +47,52 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R0x-wn-nQH">
-                                                            <rect key="frame" x="30" y="9" width="314" height="197.5"/>
-                                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzF-68-Va5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="266"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R0x-wn-nQH">
+                                                                    <rect key="frame" x="30" y="16" width="314" height="197.5"/>
+                                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="200" id="8Pj-WS-d3D"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Son dakika !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KY6-AK-t31">
+                                                                    <rect key="frame" x="30" y="216" width="314" height="42"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="200" id="on3-FF-hZK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="R0x-wn-nQH" secondAttribute="trailing" constant="30" id="20W-Iz-6da"/>
+                                                                <constraint firstItem="KY6-AK-t31" firstAttribute="top" secondItem="R0x-wn-nQH" secondAttribute="bottom" constant="1" id="AD5-xg-yZU"/>
+                                                                <constraint firstItem="R0x-wn-nQH" firstAttribute="top" secondItem="DzF-68-Va5" secondAttribute="top" constant="15" id="OgA-hj-h2b"/>
+                                                                <constraint firstAttribute="trailing" secondItem="KY6-AK-t31" secondAttribute="trailing" constant="30" id="RII-nr-bY9"/>
+                                                                <constraint firstItem="KY6-AK-t31" firstAttribute="leading" secondItem="DzF-68-Va5" secondAttribute="leading" constant="30" id="VkI-fz-xz9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="KY6-AK-t31" secondAttribute="bottom" constant="8" id="YiH-Vb-QSN"/>
+                                                                <constraint firstItem="R0x-wn-nQH" firstAttribute="leading" secondItem="DzF-68-Va5" secondAttribute="leading" constant="30" id="rS4-Qs-DPS"/>
                                                             </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="10"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Son dakika !" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KY6-AK-t31">
-                                                            <rect key="frame" x="30" y="216" width="314" height="42"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="KY6-AK-t31" secondAttribute="bottom" constant="8" id="8Yn-y1-ioR"/>
-                                                        <constraint firstAttribute="trailing" secondItem="R0x-wn-nQH" secondAttribute="trailing" constant="30" id="DyM-sj-K1Y"/>
-                                                        <constraint firstItem="R0x-wn-nQH" firstAttribute="leading" secondItem="2YQ-1C-Wyg" secondAttribute="leading" constant="30" id="Gfk-Hq-O2v"/>
-                                                        <constraint firstAttribute="trailing" secondItem="KY6-AK-t31" secondAttribute="trailing" constant="30" id="LL0-eA-Wuh"/>
-                                                        <constraint firstItem="KY6-AK-t31" firstAttribute="leading" secondItem="2YQ-1C-Wyg" secondAttribute="leading" constant="30" id="Ll0-6q-EDm"/>
-                                                        <constraint firstItem="R0x-wn-nQH" firstAttribute="top" secondItem="2YQ-1C-Wyg" secondAttribute="top" constant="8" id="lSY-w3-dPW"/>
-                                                        <constraint firstItem="KY6-AK-t31" firstAttribute="top" secondItem="R0x-wn-nQH" secondAttribute="bottom" constant="8" symbolic="YES" id="wio-3R-FUC"/>
+                                                        <constraint firstItem="DzF-68-Va5" firstAttribute="top" secondItem="2YQ-1C-Wyg" secondAttribute="top" id="KmJ-zP-gKF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DzF-68-Va5" secondAttribute="trailing" id="eUg-iD-X4b"/>
+                                                        <constraint firstItem="DzF-68-Va5" firstAttribute="leading" secondItem="2YQ-1C-Wyg" secondAttribute="leading" id="m9B-kr-KJ5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DzF-68-Va5" secondAttribute="bottom" id="uyn-sq-Kz8"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="374" height="266"/>
                                                 <connections>
                                                     <outlet property="articlePhotoImgView" destination="R0x-wn-nQH" id="SBw-Dh-Oaz"/>
                                                     <outlet property="articleTitleLabel" destination="KY6-AK-t31" id="p3Y-5v-UhL"/>
+                                                    <outlet property="recognizerContainer" destination="DzF-68-Va5" id="Nxi-Id-Cqk"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
